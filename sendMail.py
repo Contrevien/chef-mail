@@ -33,4 +33,5 @@ def sendMe():
     server.login(fromaddr, "@nzCallahan1")
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
+    
     server.quit()
