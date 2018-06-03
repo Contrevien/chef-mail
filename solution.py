@@ -15,7 +15,8 @@ htmlCodes = {
 
 
 def submissions(name):
-    source = requests.get('https://www.codechef.com/status/' + name).text
+    req = Request('https://www.codechef.com/status' + name, headers={'User-Agent': 'Mozilla/5.0'})
+    source = urlopen(req).read()
     soup = bs(source, 'lxml')
     table = soup.findAll('tbody')
     found = ''
