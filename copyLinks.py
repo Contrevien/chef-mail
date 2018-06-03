@@ -1,3 +1,4 @@
+#File to find all the links in the easy section of CodeChef
 from bs4 import BeautifulSoup as bs
 import requests
 
